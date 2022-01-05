@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SearchEngine.css";
 
 export default function SearchEngine() {
     const [city, setCity] = useState("");
@@ -20,7 +21,7 @@ function updateCity(event) {
 <div className="weather-data">
     <div class="row">
         <div className="col">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="weather icon" />
+            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="weather icon" rel="noreferrer"/>
         </div>
         <div className="col">
             5 

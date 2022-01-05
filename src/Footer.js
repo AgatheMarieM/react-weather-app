@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Footer() {
     return(
@@ -6,7 +6,7 @@ export default function Footer() {
             <small>
         <a
           href="https://github.com/AgatheMarieM/react-weather-app"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           Open source{" "}
         </a>
