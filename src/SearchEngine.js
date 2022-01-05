@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SearchEngine.css";
 import axios from "axios";
+import Forecast from "./Forecast";
 
 export default function SearchEngine() {
     const [city, setCity] = useState("");
@@ -76,13 +77,15 @@ if(loaded) {
             <li>Wind: {Math.round(weatherData.wind)}km/h</li>
             <li>Humidity: {weatherData.humidity}%</li>
             </ul>
-            </div>
-            
+            </div>            
         </div>
     </div>
 </div>
-</div>        
-</div>);
+</div>
+<Forecast />         
+              
+</div>
+);
 } else {
     return form;
 } 
