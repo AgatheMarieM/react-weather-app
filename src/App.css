@@ -3,6 +3,8 @@ body {
 }
 
 .app-wrapper {
+  font-family: "Roboto Mono", monospace;
   max-width: 500px;
   margin: 0 auto;
 }
+
