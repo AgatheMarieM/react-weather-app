@@ -2,6 +2,15 @@ body {
   background: #ffe3ff8a;
 }
 
+a {
+  text-decoration-line: none;
+  color: #ec6e4c;
+  font-weight: 600;
+}
+a:hover {
+  color: #f03501;
+}
+
 .app-wrapper {
   font-family: "Roboto Mono", monospace;
   max-width: 500px;
