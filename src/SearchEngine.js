@@ -3,11 +3,12 @@ import "./SearchEngine.css";
 import axios from "axios";
 
 export default function SearchEngine() {
-    const [city, setCity] = useState("City");
+    const [city, setCity] = useState("");
+    const [loaded, setLoaded] = useState(false);
     const [weatherData, setWeatherData] = useState("");
 
     function displayWeather(response) {
-        console.log(response.data);
+        setLoaded(true);        
         setWeatherData({
                 city: response.data.name,
                 date: "date",
@@ -32,8 +33,9 @@ function updateCity(event) {
     setCity(event.target.value);
 
 }
-    return (<div className="SearchEngine">
-        <form onSubmit={handleSubmit}>
+
+let form = (
+<form onSubmit={handleSubmit}>
             <div className="row">
                 <div className="col-9">
                     <input type="search" placeholder="Type a city" className="form-control" onChange={updateCity}/>
@@ -45,10 +47,13 @@ function updateCity(event) {
                 className="btn btn-outline-danger w-100 go-button"
               />
                 </div>            
-            </div>
-            
+            </div>            
             </form>
+);
 
+if(loaded) {
+    return (<div className="SearchEngine">
+         {form}
             <div className="today-weather">
                 <h1>{weatherData.city}</h1>
         <h2>Last updated on: {weatherData.date} and {weatherData.time}</h2>
@@ -76,8 +81,10 @@ function updateCity(event) {
         </div>
     </div>
 </div>
-</div>
-        
-</div>) 
+</div>        
+</div>);
+} else {
+    return form;
+} 
 
 }
