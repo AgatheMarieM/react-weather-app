@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./SearchEngine.css";
+import axios from "axios";
 
 export default function SearchEngine() {
-    const [city, setCity] = useState("");
+    const [city, setCity] = useState("City");
 
 function handleSubmit(event){
     event.preventDefault();
-    alert(`${city}`);
+
+    
 }
 function updateCity(event) {
     setCity(event.target.value);
