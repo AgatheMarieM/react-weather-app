@@ -37,7 +37,7 @@ function updateCity(event) {
             <input type="search" placeholder="Type a city" onChange={updateCity}/>
             <button type="submit">Go</button>
             </form>
-        <h1>{weatherData.city}</h1>
+            <div className="TodayWeather"><h1>{weatherData.city}</h1>
         <h2>Last updated on: {weatherData.date} and {weatherData.time}</h2>
 <div className="weather-data">
     <div className="row">
@@ -45,7 +45,7 @@ function updateCity(event) {
             <img src={weatherData.icon} alt="weather icon" rel="noreferrer"/>
         </div>
         <div className="col">
-            <div>{Math.round(weatherData.temperature)}</div>
+            <span>{Math.round(weatherData.temperature)}</span>
             <span className="units">
                   <a href="/">°C</a>
                   <a href="/">°F</a>
@@ -59,7 +59,8 @@ function updateCity(event) {
             </ul>
         </div>
     </div>
-</div>
+</div></div>
+        
 </div>) 
 
 }
