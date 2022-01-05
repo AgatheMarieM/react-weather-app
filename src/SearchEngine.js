@@ -4,9 +4,20 @@ import axios from "axios";
 
 export default function SearchEngine() {
     const [city, setCity] = useState("City");
+    const [weatherData, setWeatherData] = useState("");
 
     function displayWeather(response) {
         console.log(response.data);
+        setWeatherData({
+                city: response.data.name,
+                date: "date",
+                time: "time",
+                temperature: response.data.main.temp,
+                icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+                description: response.data.weather[0].description,
+                wind: response.data.wind.speed,
+                humidity: response.data.main.humidity,
+              });
     }
 
 function handleSubmit(event){
@@ -26,15 +37,15 @@ function updateCity(event) {
             <input type="search" placeholder="Type a city" onChange={updateCity}/>
             <button type="submit">Go</button>
             </form>
-        <h1>{city}</h1>
-        <h2>Last updated on: date and time</h2>
+        <h1>{weatherData.city}</h1>
+        <h2>Last updated on: {weatherData.date} and {weatherData.time}</h2>
 <div className="weather-data">
     <div className="row">
         <div className="col">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="weather icon" rel="noreferrer"/>
+            <img src={weatherData.icon} alt="weather icon" rel="noreferrer"/>
         </div>
         <div className="col">
-            5 
+            <div>{Math.round(weatherData.temperature)}</div>
             <span className="units">
                   <a href="/">°C</a>
                   <a href="/">°F</a>
@@ -42,9 +53,9 @@ function updateCity(event) {
         </div>
         <div className="col">
             <ul>
-            <li>Sunny</li>
-            <li>Wind: 2km/h</li>
-            <li>Humidity: 50%</li>
+            <li>{weatherData.description}</li>
+            <li>Wind: {Math.round(weatherData.wind)}km/h</li>
+            <li>Humidity: {weatherData.humidity}%</li>
             </ul>
         </div>
     </div>
