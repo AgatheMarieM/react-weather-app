@@ -5,11 +5,18 @@ import axios from "axios";
 export default function SearchEngine() {
     const [city, setCity] = useState("City");
 
+    function displayWeather(response) {
+        console.log(response.data);
+    }
+
 function handleSubmit(event){
     event.preventDefault();
-
-    
+    let apiKey="3b763d2584ec69ef500ca12de0c53d66";
+    let units="metric";
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayWeather);    
 }
+
 function updateCity(event) {
     setCity(event.target.value);
 
@@ -22,7 +29,7 @@ function updateCity(event) {
         <h1>{city}</h1>
         <h2>Last updated on: date and time</h2>
 <div className="weather-data">
-    <div class="row">
+    <div className="row">
         <div className="col">
             <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="weather icon" rel="noreferrer"/>
         </div>
@@ -42,7 +49,6 @@ function updateCity(event) {
         </div>
     </div>
 </div>
-
-    </div>) 
+</div>) 
 
 }
