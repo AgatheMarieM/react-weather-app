@@ -62,6 +62,13 @@ h1 {
     top: 15px;
 }
 
+.units {
+    position: relative;
+    font-size: 18px;
+    top: 2px;
+    color: rgb(73, 73, 73);
+}
+
 .weather-data {
   margin-top: 10px;
 }
