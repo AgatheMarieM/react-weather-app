@@ -55,21 +55,24 @@ function updateCity(event) {
 <div className="weather-data">
     <div className="row">
         <div className="col">
-            <img src={weatherData.icon} alt="weather icon" rel="noreferrer"/>
+            <img src={weatherData.icon} alt="weather icon" rel="noreferrer" className="today-icon"/>
         </div>
         <div className="col">
-            <span>{Math.round(weatherData.temperature)}</span>
+            <span className="today-temp">{Math.round(weatherData.temperature)}</span>
             <span className="units">
                   <a href="/">°C</a>
                   <a href="/">°F</a>
                 </span>
         </div>
         <div className="col">
-            <ul>
-            <li>{weatherData.description}</li>
+            <div className="today-description">{weatherData.description}</div>
+            <div className="today-details">
+             <ul>            
             <li>Wind: {Math.round(weatherData.wind)}km/h</li>
             <li>Humidity: {weatherData.humidity}%</li>
             </ul>
+            </div>
+            
         </div>
     </div>
 </div>

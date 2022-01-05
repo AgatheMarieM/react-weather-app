@@ -23,10 +23,44 @@ h1 {
   box-shadow: 2px 2px 2px rgba(236, 110, 76, 0.594);
 }
 
+.today-description {
+    font-size: 19px;
+    line-height: 19px;
+    position: relative;
+    top: 5px;
+}
+
+.today-details {
+    color: #212529de;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+  top: 12px;
+}
+
+.today-description:first-letter {
+    text-transform: capitalize;
+}
+
 .today-weather {
     margin: 20px auto 0;
     padding: 20px 20px;
   }
+
+.today-icon {
+    position: relative;
+    top: -10px;
+    right: -20px;
+    width: 100px;
+}
+
+.today-temp {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    top: 15px;
+}
 
 .weather-data {
   margin-top: 10px;
