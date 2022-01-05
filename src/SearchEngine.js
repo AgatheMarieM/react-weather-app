@@ -82,8 +82,7 @@ if(loaded) {
     </div>
 </div>
 </div>
-<Forecast />         
-              
+<Forecast />      
 </div>
 );
 } else {
