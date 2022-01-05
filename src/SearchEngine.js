@@ -5,6 +5,7 @@ export default function SearchEngine() {
     const [city, setCity] = useState("");
 
 function handleSubmit(event){
+    event.preventDefault();
     alert(`${city}`);
 }
 function updateCity(event) {
