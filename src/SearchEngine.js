@@ -17,8 +17,28 @@ function updateCity(event) {
             </form>
         <h1>{city}</h1>
         <h2>Last updated on: date and time</h2>
+<div className="weather-data">
+    <div class="row">
+        <div className="col">
+            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="weather icon" />
+        </div>
+        <div className="col">
+            5 
+            <span className="units">
+                  <a href="/">°C</a>
+                  <a href="/">°F</a>
+                </span>
+        </div>
+        <div className="col">
+            <ul>
+            <li>Sunny</li>
+            <li>Wind: 2km/h</li>
+            <li>Humidity: 50%</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-
-            </div>) 
+    </div>) 
 
 }
