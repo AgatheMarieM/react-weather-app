@@ -1,11 +1,15 @@
 import './App.css';
 import React from "react";
-import WeatherApp from "./WeatherApp.js";
+import SearchEngine from "./SearchEngine";
+import Footer from "./Footer";
+import Forecast from "./Forecast";
 
 function App() {
   return (
     <div className="App app-wrapper">      
-        <WeatherApp />       
+        <SearchEngine />
+        <Forecast />
+        <Footer />     
     </div>
   );
 }
