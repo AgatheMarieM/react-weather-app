@@ -34,10 +34,15 @@ function updateCity(event) {
 }
     return (<div className="SearchEngine">
         <form onSubmit={handleSubmit}>
-            <input type="search" placeholder="Type a city" onChange={updateCity}/>
-            <button type="submit">Go</button>
+            <input type="search" placeholder="Type a city" className="form-control" onChange={updateCity}/>
+            <input
+                type="submit"
+                value="GO"
+                className="btn btn-outline-danger w-100 go-button"
+              />
             </form>
-            <div className="TodayWeather"><h1>{weatherData.city}</h1>
+            <div className="today-weather">
+                <h1>{weatherData.city}</h1>
         <h2>Last updated on: {weatherData.date} and {weatherData.time}</h2>
 <div className="weather-data">
     <div className="row">
@@ -59,7 +64,8 @@ function updateCity(event) {
             </ul>
         </div>
     </div>
-</div></div>
+</div>
+</div>
         
 </div>) 
 

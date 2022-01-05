@@ -1,0 +1,10 @@
+.forecast {
+    background: rgb(255, 255, 255);
+    border: 0px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(236, 110, 76, 0.594);
+    margin: 20px auto 40px;
+    padding: 15px 15px;
+    text-align: center;
+}
+
