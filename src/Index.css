@@ -1,0 +1,22 @@
+body {
+    background: #ffe3ff8a;
+  }
+  
+a {
+    text-decoration-line: none;
+    color: #ec6e4c;
+    font-weight: 600;
+  }
+a:hover {
+    color: #f03501;
+  }
+  
+ul {
+    margin: 0 0;
+    padding: 0 0;
+  }
+  
+li {
+    list-style: none;
+  }
+  
