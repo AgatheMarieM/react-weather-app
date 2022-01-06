@@ -2,25 +2,25 @@ body {
   background: #ffe3ff8a;
 }
 
-a {
+.App a {
   text-decoration-line: none;
   color: #ec6e4c;
   font-weight: 600;
 }
-a:hover {
+.App a:hover {
   color: #f03501;
 }
 
-ul {
+.App ul {
   margin: 0 0;
   padding: 0 0;
 }
 
-li {
+.App li {
   list-style: none;
 }
 
-.app-wrapper {
+.App .app-wrapper {
   font-family: "Roboto Mono", monospace;
   max-width: 500px;
   margin: 50px auto 0;
