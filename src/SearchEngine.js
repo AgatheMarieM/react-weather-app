@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import "./SearchEngine.css";
 import axios from "axios";
 import Forecast from "./Forecast";
+import Date from "./Date";
 
 export default function SearchEngine() {
     const [city, setCity] = useState("");
     const [weatherData, setWeatherData] = useState({ready: false});
 
-    function displayWeather(response) {
-                
+    function displayWeather(response) {   
+        console.log(response);             
         setWeatherData({
                 ready: true,
                 city: response.data.name,
-                date: "date",
+                date: new Date(response.data.dt * 1000),
                 time: "time",
                 temperature: response.data.main.temp,
                 icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -32,7 +33,6 @@ function handleSubmit(event){
 
 function updateCity(event) {
     setCity(event.target.value);
-
 }
 
 let form = (
@@ -57,7 +57,7 @@ if(weatherData.ready) {
          {form}
             <div className="today-weather">
                 <h1>{weatherData.city}</h1>
-        <h2>Last updated on: {weatherData.date} and {weatherData.time}</h2>
+        <h2>Last updated on: {Date /}</h2>
 <div className="weather-data">
     <div className="row">
         <div className="col">
