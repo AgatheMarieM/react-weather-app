@@ -5,12 +5,12 @@ import Forecast from "./Forecast";
 
 export default function SearchEngine() {
     const [city, setCity] = useState("");
-    const [loaded, setLoaded] = useState(false);
-    const [weatherData, setWeatherData] = useState("");
+    const [weatherData, setWeatherData] = useState({ready: false});
 
     function displayWeather(response) {
-        setLoaded(true);        
+                
         setWeatherData({
+                ready: true,
                 city: response.data.name,
                 date: "date",
                 time: "time",
@@ -52,7 +52,7 @@ let form = (
             </form>
 );
 
-if(loaded) {
+if(weatherData.ready) {
     return (<div className="SearchEngine">
          {form}
             <div className="today-weather">
