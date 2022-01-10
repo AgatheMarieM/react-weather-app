@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./SearchEngine.css";
 import axios from "axios";
 import Forecast from "./Forecast";
-import Date from "./Date";
+import FormattedDate from "./FormattedDate";
 
 export default function SearchEngine() {
     const [city, setCity] = useState("");
     const [weatherData, setWeatherData] = useState({ready: false});
 
-    function displayWeather(response) {                     
+    function displayWeather(response) { 
+                              
         setWeatherData({
                 ready: true,
                 city: response.data.name,
@@ -56,7 +57,8 @@ if(weatherData.ready) {
          {form}
             <div className="today-weather">
                 <h1>{weatherData.city}</h1>
-        <h2><Date date={weatherData.date}/></h2>
+        <h2><FormattedDate date={weatherData.date}/></h2>
+
 <div className="weather-data">
     <div className="row">
         <div className="col">
