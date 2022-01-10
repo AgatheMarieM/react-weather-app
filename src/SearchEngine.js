@@ -8,8 +8,7 @@ export default function SearchEngine() {
     const [city, setCity] = useState("");
     const [weatherData, setWeatherData] = useState({ready: false});
 
-    function displayWeather(response) {   
-        console.log(response);             
+    function displayWeather(response) {                     
         setWeatherData({
                 ready: true,
                 city: response.data.name,
@@ -57,7 +56,7 @@ if(weatherData.ready) {
          {form}
             <div className="today-weather">
                 <h1>{weatherData.city}</h1>
-        <h2>Last updated on: {Date /}</h2>
+        <h2><Date date={weatherData.date}/></h2>
 <div className="weather-data">
     <div className="row">
         <div className="col">
