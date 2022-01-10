@@ -71,7 +71,7 @@ if(loaded) {
                 </span>
         </div>
         <div className="col">
-            <div className="today-description">{weatherData.description}</div>
+            <div className="today-description text-capitalize">{weatherData.description}</div>
             <div className="today-details">
              <ul>            
             <li>Wind: {Math.round(weatherData.wind)}km/h</li>

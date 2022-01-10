@@ -38,9 +38,6 @@
   top: 12px;
 }
 
-.SearchEngine .today-description:first-letter {
-    text-transform: capitalize;
-}
 
 .SearchEngine .today-weather {
     margin: 20px auto 0;
