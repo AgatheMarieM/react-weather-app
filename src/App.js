@@ -8,7 +8,7 @@ function App() {
     <div className="App">  
     <div className="container">
       <div className="app-wrapper">      
-      <SearchEngine />        
+      <SearchEngine defaultCity="Miami"/>        
       <Footer />
       </div> 
     </div>                                          

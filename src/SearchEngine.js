@@ -4,8 +4,8 @@ import axios from "axios";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
 
-export default function SearchEngine() {
-    const [city, setCity] = useState("");
+export default function SearchEngine(props) {
+    const [city, setCity] = useState(props.defaultCity);
     const [weatherData, setWeatherData] = useState({ready: false});
 
     function displayWeather(response) { 
@@ -23,12 +23,16 @@ export default function SearchEngine() {
               });
     }
 
-function handleSubmit(event){
-    event.preventDefault();
+function search() {
     let apiKey="3b763d2584ec69ef500ca12de0c53d66";
     let units="metric";
     let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(displayWeather);    
+    axios.get(apiUrl).then(displayWeather); 
+}
+
+function handleSubmit(event){
+    event.preventDefault();
+    search();    
 }
 
 function updateCity(event) {
@@ -87,7 +91,8 @@ if(weatherData.ready) {
 </div>
 );
 } else {
-    return form;
+    search();      
+    return (form)         
 } 
 
 }
