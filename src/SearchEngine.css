@@ -2,7 +2,7 @@
     font-size: 25px;
     font-weight: 600;
     line-height: 35px;
-    color: rgb(236, 110, 76);
+    color: #ec6e4c;
     margin: 0 auto;
   }
   
@@ -46,9 +46,8 @@
 
 .SearchEngine .today-icon {
     position: relative;
-    top: -10px;
-    right: -20px;
-    width: 100px;
+    top: 5px;
+    right: -20px;    
 }
 
 .SearchEngine .today-temp {
