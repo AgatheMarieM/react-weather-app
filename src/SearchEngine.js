@@ -3,6 +3,7 @@ import "./SearchEngine.css";
 import axios from "axios";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function SearchEngine(props) {
     const [city, setCity] = useState(props.defaultCity);
@@ -16,7 +17,7 @@ export default function SearchEngine(props) {
                 date: new Date(response.data.dt * 1000),
                 time: "time",
                 temperature: response.data.main.temp,
-                icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+                icon: response.data.weather[0].icon,
                 description: response.data.weather[0].description,
                 wind: response.data.wind.speed,
                 humidity: response.data.main.humidity,
@@ -66,7 +67,7 @@ if(weatherData.ready) {
 <div className="weather-data">
     <div className="row">
         <div className="col">
-            <img src={weatherData.icon} alt="weather icon" rel="noreferrer" className="today-icon"/>
+            <WeatherIcon code={weatherData.icon} />            
         </div>
         <div className="col">
             <span className="today-temp">{Math.round(weatherData.temperature)}</span>
