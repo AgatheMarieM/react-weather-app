@@ -24,7 +24,7 @@
 }
 
 .SearchEngine .today-description {
-    font-size: 19px;
+    font-size: 18px;
     line-height: 19px;
     position: relative;
     top: 5px;
@@ -46,8 +46,8 @@
 
 .SearchEngine .today-icon {
     position: relative;
-    top: 5px;
-    right: -20px;    
+    top: 13px;
+    right: -30px;    
 }
 
 .SearchEngine .today-temp {
