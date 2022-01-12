@@ -4,6 +4,7 @@ import axios from "axios";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function SearchEngine(props) {
     const [city, setCity] = useState(props.defaultCity);
@@ -68,13 +69,9 @@ if(weatherData.ready) {
     <div className="row">
         <div className="col">
             <WeatherIcon code={weatherData.icon} />            
-        </div>
+        </div>        
         <div className="col">
-            <span className="today-temp">{Math.round(weatherData.temperature)}</span>
-            <span className="units">
-                  <a href="/">°C</a>
-                  <a href="/">°F</a>
-                </span>
+            <WeatherTemperature celsius={weatherData.temperature} />            
         </div>
         <div className="col">
             <div className="today-description text-capitalize">{weatherData.description}</div>
