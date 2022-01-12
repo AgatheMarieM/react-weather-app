@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import SearchEngine from "./SearchEngine";
-import Footer from "./Footer";
+
 
 function App() {
   return (
@@ -9,9 +9,14 @@ function App() {
     <div className="container">
       <div className="app-wrapper">      
       <SearchEngine defaultCity="Miami"/>        
-      <Footer />
       </div> 
-    </div>                                          
+      <small>
+        <a href="https://github.com/AgatheMarieM/react-weather-app" target="_blank" rel="noreferrer"> 
+        Open source{" "}
+        </a>
+        code by Agathe M.
+      </small>
+    </div>
     </div>
   );
 }

@@ -10,8 +10,7 @@ export default function SearchEngine(props) {
     const [city, setCity] = useState(props.defaultCity);
     const [weatherData, setWeatherData] = useState({ready: false});
 
-    function displayWeather(response) { 
-                              
+    function displayWeather(response) {                               
         setWeatherData({
                 ready: true,
                 city: response.data.name,

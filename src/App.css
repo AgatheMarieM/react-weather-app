@@ -4,3 +4,9 @@
   margin: 70px auto 0;
 }
 
+.App small {
+  font-size: 13px;
+  text-align: center;
+  display: block;
+  margin: 20px auto 10px;
+}
