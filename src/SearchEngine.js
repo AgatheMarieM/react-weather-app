@@ -10,7 +10,8 @@ export default function SearchEngine(props) {
     const [city, setCity] = useState(props.defaultCity);
     const [weatherData, setWeatherData] = useState({ready: false});
 
-    function displayWeather(response) {                               
+    function displayWeather(response) { 
+                              
         setWeatherData({
                 ready: true,
                 city: response.data.name,
@@ -70,7 +71,7 @@ if(weatherData.ready) {
             <WeatherIcon code={weatherData.icon} />            
         </div>        
         <div className="col">
-            <WeatherTemperature celsius={weatherData.temperature} />            
+            <WeatherTemperature celsiusTemperature={weatherData.temperature} />            
         </div>
         <div className="col">
             <div className="today-description text-capitalize">{weatherData.description}</div>

@@ -15,14 +15,14 @@ function showCelsius(event) {
 
 if (units === "celsius") {  
      return <div classeName="WeatherTemperature">
-        <span className="today-temp">{Math.round(props.celsius)}</span>
+        <span className="today-temp">{Math.round(props.celsiusTemperature)}</span>
             <span className="units">
                   °C
                   <a href="/" onClick={showFahrenheit}>°F</a>
             </span>
          </div>
 } else {
-let fahrenheitTemperature = Math.round((props.celsius * 9/5) + 32);
+let fahrenheitTemperature = Math.round((props.celsiusTemperature * 9/5) + 32);
     return (<div classeName="WeatherTemperature">
     <span className="today-temp">{fahrenheitTemperature}</span>
         <span className="units">
