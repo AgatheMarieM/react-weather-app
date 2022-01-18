@@ -4,16 +4,16 @@ import "./Forecast.css";
 import WeatherIcon from "./WeatherIcon";
 
 
-export default function Forecast() {
+export default function Forecast(props) {
 
     function displayResponse(response) {
-        console.log(response.data)
-    }
+        console.log(response.data);
+    }  
 
     let apiKey= "3b763d2584ec69ef500ca12de0c53d66";
-    let longitude= 40.7;
-    let latitude= 74;
-    let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+    let longitude= props.coordinates.lon;
+    let latitude= props.coordinates.lat;
+    let apiUrl=`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayResponse);
 
     return(

@@ -15,6 +15,7 @@ export default function SearchEngine(props) {
         setWeatherData({
                 ready: true,
                 city: response.data.name,
+                coordinates: response.data.coord,
                 date: new Date(response.data.dt * 1000),
                 time: "time",
                 temperature: response.data.main.temp,
@@ -85,7 +86,7 @@ if(weatherData.ready) {
     </div>
 </div>
 </div>
-<Forecast />      
+<Forecast coordinates={weatherData.coordinates} />      
 </div>
 );
 } else {
