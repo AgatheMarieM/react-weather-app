@@ -68,7 +68,7 @@ if(weatherData.ready) {
 <div className="weather-data">
     <div className="row">
         <div className="col">
-            <WeatherIcon code={weatherData.icon} />            
+            <WeatherIcon code={weatherData.icon} size={60} />            
         </div>        
         <div className="col">
             <WeatherTemperature celsiusTemperature={weatherData.temperature} />            
