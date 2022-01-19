@@ -45,9 +45,7 @@
   }
 
 .SearchEngine .today-icon {
-    position: relative;
-    top: 13px;
-    right: -30px;    
+    text-align: center;    
 }
 
 .SearchEngine .today-temp {
