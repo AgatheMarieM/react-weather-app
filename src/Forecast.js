@@ -25,7 +25,8 @@ export default function Forecast(props) {
                    <ForecastDay data={forecastDaily} />
                 </div>
                 );
-                }                                    
+                }  
+                return null;                                  
                 })}                
             </div>     
         </div>
