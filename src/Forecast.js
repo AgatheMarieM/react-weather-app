@@ -14,8 +14,7 @@ export default function Forecast(props) {
     }      
 
     if(loaded) {
-        console.log(forecastData);
-        return(
+    return(
         <div className="Forecast">
             <div className="row">
                 {forecastData.map(function(forecastDaily, index) {
@@ -25,12 +24,12 @@ export default function Forecast(props) {
                    <ForecastDay data={forecastDaily} />
                 </div>
                 );
-                }  
-                return null;                                  
+                }  else { return null; }                                                
                 })}                
             </div>     
         </div>
-    )} else {
+    );
+} else {
     let apiKey= "3b763d2584ec69ef500ca12de0c53d66";
     let longitude= props.coordinates.lon;
     let latitude= props.coordinates.lat;
