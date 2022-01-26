@@ -46,7 +46,7 @@ let form = (
 <form onSubmit={handleSubmit}>
             <div className="row">
                 <div className="col-9">
-                    <input type="search" placeholder="Type a city" className="form-control" onChange={updateCity}/>
+                    <input type="search" placeholder="Your city..." className="form-control" onChange={updateCity}/>
                 </div>
                 <div className="col-3">
                     <input
